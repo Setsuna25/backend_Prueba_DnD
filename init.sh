@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Correr en dev enviroment
+usermod -aG docker ${USER}
 
 apt-get update \
     && apt-get upgrade -y \

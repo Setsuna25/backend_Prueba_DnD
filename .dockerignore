@@ -5,3 +5,4 @@ Dockerfile.prod
 .gitignore
 __pycache__
 .vscode
+entrypoint.sh
