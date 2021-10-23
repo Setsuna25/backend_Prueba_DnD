@@ -11,5 +11,8 @@ def create_db_and_tables():
 def get_session():
     return Session(engine)
 
+def get_session():
+    return Session(engine)
+
 
 engine = create_engine(get_settings().database_url, echo=True)
