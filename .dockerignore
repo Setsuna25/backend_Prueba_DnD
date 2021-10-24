@@ -6,3 +6,4 @@ Dockerfile.prod
 __pycache__
 .vscode
 entrypoint.sh
+venv

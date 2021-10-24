@@ -1,17 +1,21 @@
-FROM python:3.9.7-slim-buster
+FROM python:3.7-alpine
 
 WORKDIR /proyecto/src/
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update \
+RUN apk  update \
+    && apk add g++ \
+    && apk add  gcc \
+    && apk add  python3-dev \
+    && apk add  libevent-dev \
+    && apk add  libffi-dev \
+    && apk add  musl-dev \
+    && apk add  postgresql-dev
 
-    && apt-get -y install gcc\
-    && apt-get clean
-
-RUN pip3 install --upgrade pip 
+RUN pip3 install --upgrade  pip 
 COPY ./requirements.txt .
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r  requirements.txt
 
 COPY . .

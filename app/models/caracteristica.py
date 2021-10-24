@@ -4,7 +4,7 @@ from typing import Optional
 
 class Base_Caracteristica(SQLModel):
     punto: int
-    descripcion: str
+    descripcion: Optional[str]
 
 
 class Caracteristica(Base_Caracteristica, table=True):

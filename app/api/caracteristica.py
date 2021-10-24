@@ -5,7 +5,7 @@ from sqlmodel import select
 
 def post(input):
     with get_session() as session:
-        c = Caracteristica(punto=input.punto)
+        c = Caracteristica(punto=input.punto, descripcion=input.descripcion)
         session.add(c)
         session.commit()
         session.refresh(c)

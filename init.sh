@@ -5,5 +5,5 @@ usermod -aG docker ${USER}
 
 apt-get update \
     && apt-get upgrade -y \
-    && apt-get -y install python3-pip libpq-dev python-dev netcat \
+    && apt-get -y install python3-pip libpq-dev python-dev netcat python3-venv \
     && apt-get clean
